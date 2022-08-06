@@ -4,7 +4,7 @@
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
 
-For instance, if **P<sub>data</sub>(x)** is the probablity distribution of the training data, our goal is to learn a probablity distribution **P<sub>model</sub>(x)** which is similar to **P<sub>data</sub>(x)**.
+For instance, if ```markdown **P<sub>data</sub>(x)** ``` is the probablity distribution of the training data, our goal is to learn a probablity distribution ```markdown **P<sub>model</sub>(x)** ``` which is similar to ```markdown **P<sub>data</sub>(x)** ```.
 
 A good generative model should have the following two capabilities:
 1. It should be able to generate a random new image which not present in the training dataset, but looks similar to the training data images.
@@ -174,7 +174,7 @@ Latent compass is a tool that maps an experience onto a latent direction so one 
 [GANalyze tool](http://ganalyze.csail.mit.edu/)
 
 
-### Further Readings
+### References
 
 [Intuitively Understanding Variational Autoencoders](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
 
@@ -182,8 +182,7 @@ Latent compass is a tool that maps an experience onto a latent direction so one 
 
 [Deep Generative Modeling](http://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L4.pdf)
 
-
-
+[Exploring GAN Latent Space](https://www.youtube.com/watch?v=iuQ_f3W5Ttk&t=0s)
 
 
 
