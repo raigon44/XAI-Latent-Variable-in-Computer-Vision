@@ -1,6 +1,15 @@
 # Latent Variables in Computer Vision
 
+### Generative Modeling
+
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
+
+For instance, if P<sup>data</sup>(x) is the probablity distribution of the training data, our goal is to learn a probablity distribution P<sup>model</sup>(x) which is similar to P<sup>data</sup>(x).
+
+Inline-style: 
+![alt text](https://github.com/raigon44/xai.github.io/blob/main/deepGenerativeModel.PNG "")
+
+
 A good generative model should have the following two capabilities:
 1. It should be able to generate a random new image which not present in the training dataset, but looks similar to the training data images.
 2. They should be able to alter or explore variations on the data we already have in specific direction.
@@ -43,6 +52,7 @@ Link to the Kaggle Notebook
 - Generating new images
 - Linear interpolation
 - Controlling the generation
+- v ector calculation
 
 Link to the kaggle Notebook
 
