@@ -4,9 +4,9 @@
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
 
-For instance, if P<sup>data</sup>(x) is the probablity distribution of the training data, our goal is to learn a probablity distribution P<sup>model</sup>(x) which is similar to P<sup>data</sup>(x).
+For instance, if P<sub>data</sub>(x) is the probablity distribution of the training data, our goal is to learn a probablity distribution P<sub>model</sub>(x) which is similar to P<sub>data</sub>(x).
 
-Inline-style: 
+
 ![alt text](https://github.com/raigon44/xai.github.io/blob/main/deepGenerativeModel.PNG "")
 
 
