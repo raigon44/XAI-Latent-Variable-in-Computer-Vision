@@ -20,11 +20,16 @@ Next we will take a look at some of the generative models used in field of compu
 
 #### AutoEncoder (AE)
 
-AutoEncoders uses an unsupervised approach for learning a lower-dimensional feature representation from unlabeled training data. The encoder block learns the mapping from the input data to a low-dimensional latent space **z**. And the decoder recreates the orginal image from the latent vector. Autoencoders are optimized on re-construction loss. 
+AutoEncoders uses an unsupervised approach for learning a lower-dimensional feature representation from unlabeled training data. The encoder block learns the mapping from the input data to a low-dimensional latent space **z**. Having a low dimensional latent space allows to compress the data into small latent vector which learns a very compact enrich feature representation. Decoder learns mapping back from latent space **z**, to a reconstruct the original data. 
+
+Autoencoders are trained using the reconstruction loss, where we compare the difference between the orginal image and the reconstructed image from the decoder. The reconstruction loss forces the latent representation to capture as much "information" about the data as possible.
+
+![Image](https://github.com/raigon44/xai.github.io/blob/main/AE.PNG)
 
 Limitation:
+- AE learns a deterministic encoding, where for a given latent vector it will always generate the same output. This is not a very desirable feature for generative models.
 - Latent space is not continous. Because of this smooth interpolation is not possible and hence the capability to generate new images are limited.
-- There are empty spaves in the latent spaces. If a point from this empty space is given as input to the decoder it will generate unrealistic images.
+- There are empty spaces in the latent spaces. If a point from this empty space is given as input to the decoder it will generate unrealistic outputs.
 
 #### Variational AutoEncoder (VAE)
 
