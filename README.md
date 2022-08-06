@@ -1,15 +1,15 @@
-## Latent Variables in Computer Vision
+# Latent Variables in Computer Vision
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
 A good generative model should have the following two capabilities:
 1. It should be able to generate a random new image which not present in the training dataset, but looks similar to the training data images.
 2. They should be able to alter or explore variations on the data we already have in specific direction.
 
-To satisfy the second capability, a generative model should have a continous latent space which will allow smooth interpolation.
+To satisfy the second capability, a generative model should have a continous latent space which will allow for smooth interpolation.
 
 Next we will take a look at some of the generative models used in field of computer vision.
 
-### AutoEncoder (AE)
+#### AutoEncoder (AE)
 
 AutoEncoders uses an unsupervised approach for learning a lower-dimensional feature representation from unlabeled training data. The encoder block learns the mapping from the input data to a low-dimensional latent space z. And the decoder recreates the orginal image from the latent vector. Autoencoders are optimized on re-construction loss. 
 
@@ -17,21 +17,21 @@ Limitation:
 - Latent space is not continous. Because of this smooth interpolation is not possible and hence the capability to generate new images are limited.
 - There are empty spaves in the latent spaces. If a point from this empty space is given as input to the decoder it will generate unrealistic images.
 
-### Variational AutoEncoder (VAE)
+#### Variational AutoEncoder (VAE)
 
 VAE is designed to overcome some of the above limiatation of the AutoEncoder. Latent space of VAE are, by design, continous, allowing easy random sampling and interpolation.
 - Write how it is able to achieve this
 - Figure to compare the latent spave of both AE and VAE
 
-### General Adveserial Networks (GAN)
+#### General Adveserial Networks (GAN)
 
 Key idea
 Figure
 Generation process
 
-#### My experiments with the latent space of GAN 
+##### My experiments with the latent space of GAN 
 
-##### Training a GAN network
+###### Training a GAN network
 
 - Dataset
 - Generator architecture
@@ -44,14 +44,16 @@ Link to the Kaggle Notebook
 - Linear interpolation
 - Controlling the generation
 
-#### Other tools for exploring latent space
+Link to the kaggle Notebook
+
+### Other tools for exploring latent space
 
 ##### Latent Compass
 
 ##### Steerable GAN
 
 
-#### Further Readings
+### Further Readings
 
 
 
