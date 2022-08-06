@@ -4,7 +4,7 @@
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
 
-For instance, if ```**P<sub>data</sub>(x)** ``` is the probablity distribution of the training data, our goal is to learn a probablity distribution ``` **P<sub>model</sub>(x)** ``` which is similar to ``` **P<sub>data</sub>(x)** ```.
+For instance, if **P <sub>data</sub>(x)**  is the probablity distribution of the training data, our goal is to learn a probablity distribution **P <sub>model</sub>(x)**  which is similar to **P <sub>data</sub>(x)** .
 
 A good generative model should have the following two capabilities:
 1. It should be able to generate a random new image which not present in the training dataset, but looks similar to the training data images.
