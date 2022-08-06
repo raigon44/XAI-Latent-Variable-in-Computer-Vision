@@ -4,7 +4,7 @@
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
 
-For instance, if ```markdown **P<sub>data</sub>(x)** ``` is the probablity distribution of the training data, our goal is to learn a probablity distribution ```markdown **P<sub>model</sub>(x)** ``` which is similar to ```markdown **P<sub>data</sub>(x)** ```.
+For instance, if ```**P<sub>data</sub>(x)** ``` is the probablity distribution of the training data, our goal is to learn a probablity distribution ``` **P<sub>model</sub>(x)** ``` which is similar to ``` **P<sub>data</sub>(x)** ```.
 
 A good generative model should have the following two capabilities:
 1. It should be able to generate a random new image which not present in the training dataset, but looks similar to the training data images.
@@ -29,7 +29,7 @@ Autoencoders are trained using the reconstruction loss, where we compare the dif
 
 ### Variational AutoEncoder (VAE)
 
-Variational AutoEncoder overcomes the deterministic nature of AE by replacing the deterministic latent space **z** with a stochastic sampling operation. Insteand of learning a single latent vector **z**, for each input image, VAE learns a mean vector and a standard deviation vector. It then samples from this mean and standard deviation to compute the latent sample **z**. So during the training of a VAE, for the same input image, different latent vectors are sampled from the distribution (mean & std). This means there is no longer a one to one mapping between the input image a latent space. Every input image is mapped to a distibution in the latent space. This also ensure that the latent space created by VAE will be continous and thus enables the smooth interpolation.   
+Variational AutoEncoder overcomes the deterministic nature of AE by replacing the deterministic latent space **z** with a stochastic sampling operation. Instead of learning a single latent vector **z**, for each input image, VAE learns a mean vector and a standard deviation vector. It then samples from this mean and standard deviation to compute the latent sample **z**. So during the training of a VAE, for the same input image, different latent vectors are sampled from the distribution (mean & std). This means there is no longer a one to one mapping between the input image and a point in latent space. Every input image is mapped to a distibution in the latent space. This also ensure that the latent space created by VAE will be continous and thus enables the smooth interpolation.   
 
 <img src="VAE.PNG" alt="Variational AuotEncoder">
 
@@ -49,14 +49,14 @@ In GAN, we don't explicitly model the underlying distribution of the data. Inste
 GAN have 2 neural networks: Generator and Discriminator. 
 **Generator** takes as input the random noise and converts it into a fake data instance.
 **Discriminator** tries to identify real data from fake instances created by the generator.
-During training these 2 networks compete against each other. Discriminator will trained to improve its capability to identify fake images. This will force the generator to improve and in turn create fake instances which are similar to the original training data distribution.
+During training these 2 networks compete against each other. Discriminator will be trained to improve its capability to identify fake images. This will force the generator to improve and in turn create fake instances which are more similar to the original training data distribution.
 
 
 ### My experiments with GAN Latent Space
 
 ***Dataset***
 
-For the training GAN, I used UTKFace dataset containing over 23000 images of faces of humans beloning to different ethinic group, age, gender, expressing different emotions etc. While training I have used only 15000 images from this dataset. All the images in the dataset are color images with the resoultion 128 x 128.
+For training GAN, I used UTKFace dataset containing over 23000 images of faces of humans beloning to different ethinic group, age, gender, expressing different emotions etc. While training I have used only 15000 images from this dataset. All the images in the dataset are color images with the resoultion 128 x 128.
 
 The model was trained for 100 epochs.
 
@@ -110,11 +110,11 @@ def discriminator(input_shape=(128, 128, 3)):
     return model
 ```
 
-Link to code : [GAN Training](https://github.com/raigon44/xai.github.io/blob/main/gan-latentspace.ipynb)
+Link to code (Training) : [GAN Training](https://github.com/raigon44/xai.github.io/blob/main/gan-latentspace.ipynb)
 
 To see the saved version of the notebook in Kaggle, kindly check the below link.
 
-Link to Kaggle Notebook : [GAN-Training](https://www.kaggle.com/code/raigon13/gan-latentspace/notebook)
+Link to Kaggle Notebook (Training) : [GAN-Training](https://www.kaggle.com/code/raigon13/gan-latentspace/notebook)
 
 After training, I saved the generator model to conduct further experiments.
 
@@ -126,7 +126,7 @@ Here I have generated 9 distinct 100 dimensional random points from a standard n
 
 ***Linear Interpolation***
 
-Here I generated 2 random 100 dimensional points from a standard normal distribution and interpolate between them in the latent space with 6 steps (including the starting and final points). The points in the latent space corresponding to these 6 points are input to the generator model to create 6 images that tell us the correspoing transformation in the learned target data distribution space.
+Here I generated 2 random 100 dimensional points from a standard normal distribution and interpolate between them in the latent space with 6 steps (including the starting and final points). The points in the latent space corresponding to these 6 points are fed to the generator model to create 6 images that tell us the correspoing transformation in the learned target data distribution space. The below figure shows an example for this transformation.
 
 <img src="interpolate.PNG" alt="Linear interpolation">
 
@@ -140,11 +140,11 @@ To obtain the "vector" representing "glasses", I subracted the average vector co
 <img src="vector.PNG" alt="Vector arithemetic">
 
 
-Link to code: [Latent VAR walks](https://github.com/raigon44/xai.github.io/blob/main/latent-var-walks.ipynb)
+Link to code (Experiments): [Latent VAR walks](https://github.com/raigon44/xai.github.io/blob/main/latent-var-walks.ipynb)
 
 To see the saved version of the notebook in Kaggle, kindly check the below link.
 
-Link to Kaggle Notebook : [Laten-VAR-walks](https://www.kaggle.com/code/raigon13/latent-var-walks/notebook)
+Link to Kaggle Notebook (Experiments) : [Laten-VAR-walks](https://www.kaggle.com/code/raigon13/latent-var-walks/notebook)
 
 
 ### Other tools for exploring latent space
