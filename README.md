@@ -44,13 +44,15 @@ Below is a figure showing the latent space of AE and VAE for the MNIST dataset. 
 ### Generative Adveserial Networks (GAN)
 
 So far in both AE and VAE, we input the image data to the encoder and during training we try to model the underlying distribution of the data. However, one of the major limitation of such model is we cannot directly sample from these complex distributions learned by the model. 
-In GAN, we don't explicitly model the underlying distribution of the data. Instead, we learn a representation that can be sucessful in generating new instances which are similar to the training data. Here we sample from something simple (eg:noise) and learn a transformation to the training data distribution.
+In GAN, we don't explicitly model the underlying distribution of the data. Instead, we learn a representation that can be sucessful in generating new instances which are similar to the training data. Here we sample from something simple (eg:noise) and learn a functional transformation to the training data distribution. By learning this functional transformation, we can then sample to generate fake instances which will be similar to the training data distribution. 
 
 <img src="GAN.PNG" alt="Generative Adveserial Networks">
 
-Key idea
-Figure
-Generation process
+GAN have 2 neural networks: Generator and Discriminator. 
+**Generator** takes as input the random noise and converts it into a fake data instance.
+**Discriminator** tries to identify real data from fake instances created by the generator.
+During training these 2 networks compete against each other. Discriminator will trained to improve its capability to identify fake images. This will force the generator to improve and in turn create fake instances which are similar to the original training data distribution.
+
 
 #### My experiments with the latent space of GAN 
 
