@@ -62,7 +62,7 @@ For the training GAN, I used UTKFace dataset containing over 23000 images of fac
 
 In my experiments I have used the latent space (noise) dimension as 100. So the generator neural network will take as input a 100 dimensional random vector generated from a standard normal distribution and it outputs a 128 x 128 x 3 image.
 
-```markdown
+```python
 def generator(latent_dimension):
     model = Sequential()
     nodes = 128 * 8 * 8
