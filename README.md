@@ -149,12 +149,43 @@ Link to Kaggle Notebook : [Laten-VAR-walks](https://www.kaggle.com/code/raigon13
 
 ### Other tools for exploring latent space
 
-##### Latent Compass
+Other methodologies where introduced to explore the latent space of GAN to control images generated. In the below sub-sections contains links to the orginal paper and to the tools.
 
-##### Steerable GAN
+#### Latent Compass
+
+Latent compass is a tool that maps an experience onto a latent direction so one can repeat the experience by moving in that direction from any starting place.
+
+[Latent Compass Tool](http://latentcompass.com/#/?class=306)
+
+[Paper](https://arxiv.org/abs/2012.14283)
+
+[Introductory video](https://www.youtube.com/watch?v=50fzBwa9Z1I)
+
+#### Steerable GAN
+
+[Paper](https://arxiv.org/pdf/1907.07171)
+
+[Colab Notebook provided by authors](https://colab.research.google.com/drive/1-8RXAcwQXiLsocNQoOnm9uDsEvr34Bqa?usp=sharing)
+
+#### GANalyze
+
+[Paper](https://scholar.google.com/scholar?output=instlink&q=info:VHLJcZQ82sIJ:scholar.google.com/&hl=en&as_sdt=0,5&scillfp=2454665381828472632&oi=lle)
+
+[GANalyze tool](http://ganalyze.csail.mit.edu/)
 
 
 ### Further Readings
+
+[Intuitively Understanding Variational Autoencoders](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
+
+[Towards an Interpretable Latent Space](https://thilospinner.com/towards-an-interpretable-latent-space/)
+
+[Deep Generative Modeling](http://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L4.pdf)
+
+
+
+
+
 
 
 
