@@ -1,6 +1,6 @@
 # Latent Variables in Computer Vision
 
-### Generative Modeling
+## Generative Modeling
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
 
@@ -18,7 +18,7 @@ To satisfy the second capability, a generative model should have a continous lat
 
 Next we will take a look at some of the generative models used in field of computer vision.
 
-#### AutoEncoder (AE)
+### AutoEncoder (AE)
 
 AutoEncoders uses an unsupervised approach for learning a lower-dimensional feature representation from unlabeled training data. The encoder block learns the mapping from the input data to a low-dimensional latent space **z**. Having a low dimensional latent space allows to compress the data into small latent vector which learns a very compact enrich feature representation. Decoder learns mapping back from latent space **z**, to a reconstruct the original data. 
 
@@ -31,25 +31,25 @@ Limitation:
 - Latent space is not continous. Because of this smooth interpolation is not possible and hence the capability to generate new images are limited.
 - There are empty spaces in the latent spaces. If a point from this empty space is given as input to the decoder it will generate unrealistic outputs.
 
-#### Variational AutoEncoder (VAE)
+### Variational AutoEncoder (VAE)
 
 Variational AutoEncoder overcomes the deterministic nature of AE by replacing the deterministic latent space **z** with a stochastic sampling operation. Insteand of learning a single latent vector **z**, for each input image, VAE learns a mean vector and a standard deviation vector. It then samples from this mean and standard deviation to compute the latent sample **z**. So during the training of a VAE, for the same input image, different latent vectors are sampled from the distribution (mean & std). This means there is no longer a one to one mapping between the input image a latent space. Every input image is mapped to a distibution in the latent space. This also ensure that the latent space created by VAE will be continous and thus enables the smooth interpolation.   
 
 ![VAE](https://github.com/raigon44/xai.github.io/blob/main/VAE.PNG)
 
-##### Latent space of AE and VAE
+#### Latent space of AE and VAE
 
 Below is a figure showing the latent space of AE and VAE for the MNIST dataset. As we can see the latent space of AE is not continous and there are empty regions between the datapoints in various classes. And it have minimal overlap. Compared to this, the latent space of VAE  is more continous and have overlapping regions. This allows for smooth interpolation in the latent space.
 
 ![Latent space of AE and VAE](https://github.com/raigon44/xai.github.io/blob/main/latentSpace.PNG)
 
-#### General Adveserial Networks (GAN)
+### General Adveserial Networks (GAN)
 
 Key idea
 Figure
 Generation process
 
-##### My experiments with the latent space of GAN 
+#### My experiments with the latent space of GAN 
 
 ###### Training a GAN network
 
