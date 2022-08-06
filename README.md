@@ -4,10 +4,10 @@
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
 
-For instance, if P<sub>data</sub>(x) is the probablity distribution of the training data, our goal is to learn a probablity distribution P<sub>model</sub>(x) which is similar to P<sub>data</sub>(x).
+For instance, if **P<sub>data</sub>(x)** is the probablity distribution of the training data, our goal is to learn a probablity distribution **P<sub>model</sub>(x)** which is similar to **P<sub>data</sub>(x)**.
 
 
-![alt text](https://github.com/raigon44/xai.github.io/blob/main/deepGenerativeModel.PNG "")
+![Image](https://github.com/raigon44/xai.github.io/blob/main/deepGenerativeModel.PNG)
 
 
 A good generative model should have the following two capabilities:
@@ -20,7 +20,7 @@ Next we will take a look at some of the generative models used in field of compu
 
 #### AutoEncoder (AE)
 
-AutoEncoders uses an unsupervised approach for learning a lower-dimensional feature representation from unlabeled training data. The encoder block learns the mapping from the input data to a low-dimensional latent space z. And the decoder recreates the orginal image from the latent vector. Autoencoders are optimized on re-construction loss. 
+AutoEncoders uses an unsupervised approach for learning a lower-dimensional feature representation from unlabeled training data. The encoder block learns the mapping from the input data to a low-dimensional latent space **z**. And the decoder recreates the orginal image from the latent vector. Autoencoders are optimized on re-construction loss. 
 
 Limitation:
 - Latent space is not continous. Because of this smooth interpolation is not possible and hence the capability to generate new images are limited.
