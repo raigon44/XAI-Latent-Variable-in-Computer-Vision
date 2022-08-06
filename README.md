@@ -41,7 +41,12 @@ Below is a figure showing the latent space of AE and VAE for the MNIST dataset. 
 
 <img src="latentSpace.PNG" alt="Latent space of AE and VAE">
 
-### General Adveserial Networks (GAN)
+### Generative Adveserial Networks (GAN)
+
+So far in both AE and VAE, we input the image data to the encoder and during training we try to model the underlying distribution of the data. However, one of the major limitation of such model is we cannot directly sample from these complex distributions learned by the model. 
+In GAN, we don't explicitly model the underlying distribution of the data. Instead, we learn a representation that can be sucessful in generating new instances which are similar to the training data. Here we sample from something simple (eg:noise) and learn a transformation to the training data distribution.
+
+<img src="GAN.PNG" alt="Generative Adveserial Networks">
 
 Key idea
 Figure
