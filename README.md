@@ -26,6 +26,8 @@ Autoencoders are trained using the reconstruction loss, where we compare the dif
 
 ![Image](https://github.com/raigon44/xai.github.io/blob/main/AE.PNG)
 
+<img src="https://github.com/raigon44/xai.github.io/blob/main/AE.PNG" alt="AE">
+
 Limitation:
 - AE learns a deterministic encoding, where for a given latent vector it will always generate the same output. This is not a very desirable feature for generative models, as we want our model to generate new images and not the direct reconstruction of the orginal data.
 - Latent space is not continous. Because of this smooth interpolation is not possible and hence the capability to generate new images are limited.
