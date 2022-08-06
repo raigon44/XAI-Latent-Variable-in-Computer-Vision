@@ -6,8 +6,6 @@ The goal of deep generative models is to take as input a training sample from so
 
 For instance, if **P<sub>data</sub>(x)** is the probablity distribution of the training data, our goal is to learn a probablity distribution **P<sub>model</sub>(x)** which is similar to **P<sub>data</sub>(x)**.
 
-<img src="deepGenerativeModel.PNG" alt="">
-
 A good generative model should have the following two capabilities:
 1. It should be able to generate a random new image which not present in the training dataset, but looks similar to the training data images.
 2. They should be able to alter or explore variations on the data we already have in specific direction.
@@ -54,7 +52,36 @@ GAN have 2 neural networks: Generator and Discriminator.
 During training these 2 networks compete against each other. Discriminator will trained to improve its capability to identify fake images. This will force the generator to improve and in turn create fake instances which are similar to the original training data distribution.
 
 
-#### My experiments with the latent space of GAN 
+### My experiments with GAN Latent Space
+
+***Dataset***
+
+For the training GAN, I used UTKFace dataset containing over 23000 images of faces of humans beloning to different ethinic group, age, gender, expressing different emotions etc. While training I have used only 15000 images from this dataset. All the images in the dataset are color images with the resoultion 128 x 128.
+
+***Generator Architecture***
+
+In my experiments I have used the latent space (noise) dimension as 100. So the generator neural network will take as input a 100 dimensional random vector generated from a standard normal distribution and it outputs a 128 x 128 x 3 image.
+
+```markdown
+def generator(latent_dimension):
+    model = Sequential()
+    nodes = 128 * 8 * 8
+    model.add(Dense(nodes, input_dim=latent_dimension))
+    model.add(LeakyReLU(alpha=0.2))
+    model.add(Reshape((8, 8, 128)))
+    model.add(Conv2DTranspose(128, (4, 4), strides=(2, 2), padding='same'))
+    model.add(LeakyReLU(alpha=0.2))
+    model.add(Conv2DTranspose(128, (4, 4), strides=(2, 2), padding='same'))
+    model.add(LeakyReLU(alpha=0.2))
+    model.add(Conv2DTranspose(128, (4, 4), strides=(2, 2), padding='same'))
+    model.add(LeakyReLU(alpha=0.2))
+    model.add(Conv2DTranspose(128, (4, 4), strides=(2, 2), padding='same'))
+    model.add(LeakyReLU(alpha=0.2))
+    model.add(Conv2D(3, (8, 8), activation='tanh', padding='same'))
+    return model
+```
+
+
 
 ###### Training a GAN network
 
