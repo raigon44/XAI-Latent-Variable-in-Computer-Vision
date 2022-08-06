@@ -24,11 +24,9 @@ AutoEncoders uses an unsupervised approach for learning a lower-dimensional feat
 
 Autoencoders are trained using the reconstruction loss, where we compare the difference between the orginal image and the reconstructed image from the decoder. The reconstruction loss forces the latent representation to capture as much "information" about the data as possible.
 
-![Image](https://github.com/raigon44/xai.github.io/blob/main/AE.PNG)
+<img src="AE.PNG" alt="AuotEncoder">
 
-<img src="https://github.com/raigon44/xai.github.io/blob/main/AE.PNG" alt="AE">
-
-Limitation:
+**Limitation**:
 - AE learns a deterministic encoding, where for a given latent vector it will always generate the same output. This is not a very desirable feature for generative models, as we want our model to generate new images and not the direct reconstruction of the orginal data.
 - Latent space is not continous. Because of this smooth interpolation is not possible and hence the capability to generate new images are limited.
 - There are empty spaces in the latent spaces. If a point from this empty space is given as input to the decoder it will generate unrealistic outputs.
