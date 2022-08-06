@@ -27,15 +27,21 @@ Autoencoders are trained using the reconstruction loss, where we compare the dif
 ![Image](https://github.com/raigon44/xai.github.io/blob/main/AE.PNG)
 
 Limitation:
-- AE learns a deterministic encoding, where for a given latent vector it will always generate the same output. This is not a very desirable feature for generative models.
+- AE learns a deterministic encoding, where for a given latent vector it will always generate the same output. This is not a very desirable feature for generative models, as we want our model to generate new images and not the direct reconstruction of the orginal data.
 - Latent space is not continous. Because of this smooth interpolation is not possible and hence the capability to generate new images are limited.
 - There are empty spaces in the latent spaces. If a point from this empty space is given as input to the decoder it will generate unrealistic outputs.
 
 #### Variational AutoEncoder (VAE)
 
-VAE is designed to overcome some of the above limiatation of the AutoEncoder. Latent space of VAE are, by design, continous, allowing easy random sampling and interpolation.
-- Write how it is able to achieve this
-- Figure to compare the latent spave of both AE and VAE
+Variational AutoEncoder overcomes the deterministic nature of AE by replacing the deterministic latent space **z** with a stochastic sampling operation. Insteand of learning a single latent vector **z**, for each input image, VAE learns a mean vector and a standard deviation vector. It then samples from this mean and standard deviation to compute the latent sample **z**. So during the training of a VAE, for the same input image, different latent vectors are sampled from the distribution (mean & std). This means there is no longer a one to one mapping between the input image a latent space. Every input image is mapped to a distibution in the latent space. This also ensure that the latent space created by VAE will be continous and thus enables the smooth interpolation.   
+
+![VAE](https://github.com/raigon44/xai.github.io/blob/main/VAE.PNG)
+
+##### Latent space of AE and VAE
+
+Below is a figure showing the latent space of AE and VAE for the MNIST dataset. As we can see the latent space of AE is not continous and there are empty regions between the datapoints in various classes. And it have minimal overlap. Compared to this, the latent space of VAE  is more continous and have overlapping regions. This allows for smooth interpolation in the latent space.
+
+![Latent space of AE and VAE](https://github.com/raigon44/xai.github.io/blob/main/latentSpace.PNG)
 
 #### General Adveserial Networks (GAN)
 
