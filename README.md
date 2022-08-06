@@ -110,7 +110,7 @@ def discriminator(input_shape=(128, 128, 3)):
     return model
 ```
 
-Link to code (Training) : [GAN Training](https://github.com/raigon44/xai.github.io/blob/main/gan-latentspace.ipynb)
+Link to code (Training) : [GAN Training](https://github.com/raigon44/XAI-Course/blob/main/gan-latentspace.ipynb)
 
 To see the saved version of the notebook in Kaggle, kindly check the below link.
 
@@ -140,7 +140,7 @@ To obtain the "vector" representing "glasses", I subracted the average vector co
 <img src="vector.PNG" alt="Vector arithemetic">
 
 
-Link to code (Experiments): [Latent VAR walks](https://github.com/raigon44/xai.github.io/blob/main/latent-var-walks.ipynb)
+Link to code (Experiments): [Latent VAR walks](https://github.com/raigon44/XAI-Course/blob/main/latent-var-walks.ipynb)
 
 To see the saved version of the notebook in Kaggle, kindly check the below link.
 
