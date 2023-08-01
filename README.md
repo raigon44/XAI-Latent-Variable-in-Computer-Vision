@@ -1,5 +1,24 @@
 # Latent Variables in Computer Vision
 
+## Replication of the Results
+
+#### Training the GAN Network
+
+Download and run the below jupyter notebook:
+[GAN Training](https://github.com/raigon44/XAI-Course/blob/main/gan-latentspace.ipynb)
+
+OR run the below Kaggle notebook:
+Link to Kaggle Notebook (Training) : [GAN-Training](https://www.kaggle.com/code/raigon13/gan-latentspace/notebook)
+
+#### Experiments with latent space
+
+Download and run the below jupyter notebook:
+Link to code (Experiments): [Latent VAR walks](https://github.com/raigon44/XAI-Course/blob/main/latent-var-walks.ipynb)
+
+OR run the below Kaggle notebook:
+
+Link to Kaggle Notebook (Experiments) : [Laten-VAR-walks](https://www.kaggle.com/code/raigon13/latent-var-walks/notebook)
+
 ## Generative Modeling
 
 The goal of deep generative models is to take as input a training sample from some distribution and learn a model that represents that distribution.
