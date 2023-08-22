@@ -5,7 +5,7 @@
 #### Training the GAN Network
 
 Download and run the below jupyter notebook:
-[GAN Training](https://github.com/raigon44/XAI-Course/blob/main/gan-latentspace.ipynb)
+[GAN Training](https://github.com/raigon44/XAI-Course/blob/main/notebooks/gan-latentspace.ipynb)
 
 OR run the below Kaggle notebook:
 Link to Kaggle Notebook (Training) : [GAN-Training](https://www.kaggle.com/code/raigon13/gan-latentspace/notebook)
@@ -13,7 +13,7 @@ Link to Kaggle Notebook (Training) : [GAN-Training](https://www.kaggle.com/code/
 #### Experiments with latent space
 
 Download and run the below jupyter notebook:
-Link to code (Experiments): [Latent VAR walks](https://github.com/raigon44/XAI-Course/blob/main/latent-var-walks.ipynb)
+Link to code (Experiments): [Latent VAR walks](https://github.com/raigon44/XAI-Course/blob/main/notebooks/latent-var-walks.ipynb)
 
 OR run the below Kaggle notebook:
 
